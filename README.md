@@ -6,7 +6,7 @@ KanJutsu is a comprehensive, web-based Kanji study aid that combines a powerful 
 This application was built as a dedicated learning project to practice and solidify full-stack development skills—specifically building with React, managing state, routing API requests, and implementing custom logic algorithms. It bridges the gap between software engineering and language learning, providing a practical, real-world tool for studying Japanese.
 
 ✨ Key Features
-Advanced Kanji Lookup: Search for English words, Hiragana, or Kanji to retrieve rich data, including JLPT levels, stroke counts, Onyomi/Kunyomi readings, and English meanings.
+Kanji Lookup: Search for Kanji to retrieve rich data, including JLPT levels, stroke counts, Onyomi/Kunyomi readings, and English meanings.
 
 Compound Word Integration: Automatically fetches and displays common compound words associated with searched Kanji to provide real-world context.
 
@@ -17,6 +17,8 @@ Live Study Metrics: Tracks your study sessions in real-time, displaying total ca
 Local Storage Persistence: Securely saves your custom flashcard deck and SRS progress directly to your browser's local storage so you never lose your progress.
 
 Custom API Proxy: Utilizes a Node/Express backend function to seamlessly interface with the Jisho API alongside kanjiapi.dev.
+
+Deployed at: https://kanjutsu.vercel.app/
 
 🛠️ Built With
 Frontend: React, Vite
