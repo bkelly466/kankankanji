@@ -12,7 +12,7 @@
  */
 
 export const calculateNextReview = (card, quality) => {
-  let { repetitions, easeFactor, interval } = card;
+  let { repetitions, easeFactor, interval } = card; // Destructure current SRS metrics from the card
   
   // Clamp quality to 0-5
   quality = Math.max(0, Math.min(5, quality));
@@ -26,16 +26,16 @@ export const calculateNextReview = (card, quality) => {
   
   if (quality < 3) {
     // If quality is poor, reset
-    newRepetitions = 0;
-    newInterval = 1;
+    newRepetitions = 0; // Reset repetitions
+    newInterval = 1; // Review again tomorrow
   } else {
     // If quality is good or excellent
     if (repetitions === 0) {
-      newInterval = 1;
+      newInterval = 1; 
     } else if (repetitions === 1) {
-      newInterval = 3;
+      newInterval = 3; // Review after 3 days
     } else {
-      newInterval = Math.round(interval * newEaseFactor);
+      newInterval = Math.round(interval * newEaseFactor); // Review after interval * ease factor
     }
     newRepetitions = repetitions + 1;
   }

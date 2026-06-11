@@ -3,6 +3,7 @@ import './App.css'
 import Query from './Components/Query';
 import StudySession from './Components/StudySession';
 import { getReviewStats } from './utils/srsAlgorithm';
+import logo from './assets/logo.png';
 
 const LOCAL_STORAGE_KEY = 'srs_flashcard_deck';
 
@@ -61,10 +62,12 @@ function App() {
       {/*Conditional rendering based on study mode*/}
       {!isStudyTime ?
       <div className="container my-5 text-dark">
-        <div className="d-flex flex-column align-items-center text-center mb-4">
-          <h1 className="display-4 fw-bold mb-3">KanKanKanji</h1>
-          <p className="lead mb-4">Your comprehensive Kanji study aid</p>
-         </div>
+        <div className="brand-header text-center mb-5">
+          <img src={logo} alt="KanKanKanji Logo" className="brand-logo mb-3" />
+          <h1 className="brand-title">KanKanKanji</h1>
+          <div className="brand-divider"></div>
+          <p className="brand-subtitle">Your comprehensive Kanji study aid</p>
+        </div>
         <div className="w-100 mb-4">
           <Query onAddCard={handleAddCard} />
         </div>
@@ -82,9 +85,11 @@ function App() {
       : 
 
       <div className="container my-5 text-dark d-flex flex-column align-items-center">
-        <div className="mb-4 text-center">
-          <h1 className="display-4 fw-bold">KanKanKanji</h1>
-          <p className="lead mb-0">Study Mode</p>
+        <div className="brand-header text-center mb-5">
+          <img src={logo} alt="KanKanKanji Logo" className="brand-logo mb-3" />
+          <h1 className="brand-title">KanKanKanji</h1>
+          <div className="brand-divider"></div>
+          <p className="brand-subtitle">It's Study Time!</p>
         </div>
 
         {/* Review Statistics */}
