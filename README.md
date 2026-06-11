@@ -1,16 +1,54 @@
 # React + Vite
+KanJutsu
+KanJutsu is a comprehensive, web-based Kanji study aid that combines a powerful Japanese dictionary with a custom Spaced Repetition System (SRS) flashcard deck.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🌱 About this Project:
+This application was built as a dedicated learning project to practice and solidify full-stack development skills—specifically building with React, managing state, routing API requests, and implementing custom logic algorithms. It bridges the gap between software engineering and language learning, providing a practical, real-world tool for studying Japanese.
 
-Currently, two official plugins are available:
+✨ Key Features
+Advanced Kanji Lookup: Search for English words, Hiragana, or Kanji to retrieve rich data, including JLPT levels, stroke counts, Onyomi/Kunyomi readings, and English meanings.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Compound Word Integration: Automatically fetches and displays common compound words associated with searched Kanji to provide real-world context.
 
-## React Compiler
+Spaced Repetition System (SRS): Features a built-in flashcard deck that utilizes a custom implementation of the SM-2 spaced repetition algorithm. It dynamically calculates your next review date based on how easily you recall the answer (Again, Hard, Good).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Live Study Metrics: Tracks your study sessions in real-time, displaying total cards, cards due today, and accuracy percentages.
 
-## Expanding the ESLint configuration
+Local Storage Persistence: Securely saves your custom flashcard deck and SRS progress directly to your browser's local storage so you never lose your progress.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Custom API Proxy: Utilizes a Node/Express backend function to seamlessly interface with the Jisho API alongside kanjiapi.dev.
+
+🛠️ Built With
+Frontend: React, Vite
+
+Styling: CSS, Bootstrap
+
+Backend / APIs: Serverless API functions, Jisho.org API, KanjiAPI.dev
+
+Deployment Setup: Configured for Vercel
+
+🚀 Getting Started
+To get a local copy up and running, follow these simple steps.
+
+Prerequisites
+npm
+
+Bash
+npm install npm@latest -g
+Installation
+Clone the repository:
+
+Bash
+git clone https://github.com/bkelly466/kanjutsu.git
+Navigate into the project directory:
+
+Bash
+cd kanjutsu
+Install NPM packages:
+
+Bash
+npm install
+Start the development server:
+
+Bash
+npm run dev
